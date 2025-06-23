@@ -53,7 +53,7 @@ const projects = [
   // ... your projects array ...
 ];
 
-// Contact Form
+// Contact Form (unchanged)
 function ContactForm() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [success, setSuccess] = useState(false);
@@ -289,7 +289,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Contact Form Section */}
+      {/* Contact Form Section (unchanged) */}
       <section className="container mx-auto px-4 md:px-8 py-20">
         <ContactForm />
       </section>
