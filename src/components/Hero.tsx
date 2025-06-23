@@ -40,7 +40,7 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center px-6 lg:px-8 bg-background text-foreground"
     >
-      <div className="max-w-5xl mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-12">
+      <div className="max-w-5xl mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-32 mt-12 md:mt-24">
         {/* Photo Section */}
         <div className="flex-shrink-0 flex flex-col items-center md:items-start">
           <div className="relative group">
@@ -57,7 +57,7 @@ const Hero = () => {
         </div>
 
         {/* Text Section */}
-        <div className="flex-1 text-center md:text-left">
+        <div className="flex-1 text-center md:text-left mt-8 md:mt-0">
           <div className="mb-8">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
