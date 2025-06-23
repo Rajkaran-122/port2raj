@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 232 24% 10%;           /* #18181b */
+    --foreground: 0 0% 98%;              /* #fafafa */
+
+    --card: 232 24% 12%;                 /* #23233a */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 232 24% 14%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 265 89% 70%;              /* #a78bfa */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 320 80% 70%;            /* #f472b6 */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 232 24% 20%;
+    --muted-foreground: 232 24% 70%;
+
+    --accent: 200 100% 60%;              /* #38bdf8 */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 80% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 232 24% 20%;
+    --input: 232 24% 20%;
+    --ring: 265 89% 70%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 232 24% 12%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 265 89% 70%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 320 80% 70%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 232 24% 20%;
+    --sidebar-ring: 265 89% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .typing-animation {
+    overflow: hidden;
+    border-right: 3px solid;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 3.5s steps(40, end), blink 1s infinite;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl shadow-lg;
+  }
+
+  .hover-glow {
+    transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  }
+
+  .hover-glow:hover {
+    @apply shadow-2xl shadow-primary/25 -translate-y-1 scale-[1.02];
+  }
+}
