@@ -1,54 +1,21 @@
 import { useState } from 'react';
-import { Github, Link as LinkIcon, Star, BadgeCheck, ExternalLink, Mail, Smile, Code2, Heart, Coffee } from 'lucide-react';
+import { Github, Link as LinkIcon, Star, BadgeCheck, ExternalLink, Mail } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
-// Fun Facts / Personal Interests
-const funFacts = [
-  { icon: Smile, color: "text-yellow-400", text: "Anime & Manga Enthusiast" },
-  { icon: Code2, color: "text-blue-500", text: "Hackathon Winner (3x)" },
-  { icon: Heart, color: "text-pink-500", text: "Open Source Contributor" },
-  { icon: Coffee, color: "text-amber-700", text: "Coffee & Lo-fi Addict" },
-];
-
-// Tech Stack / Tools
-const techStack = [
-  { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-  { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-  { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-  { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-  { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-  { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-  { name: "Tailwind", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" },
-  { name: "Vercel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" },
-  { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
-  { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-];
-
 // Testimonials
 const testimonials = [
   {
-    name: "Amit Sharma",
-    role: "Senior Developer, TechCorp",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-    text: "Rajkaran is a fantastic developer! His attention to detail and passion for clean code is unmatched. Highly recommended for any React project.",
+    name: "Sarah Gupta",
+    role: "Product Designer at TechCorp",
+    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    text: "Rajkaran's attention to detail and innovative solutions transformed our user experience. His full-stack expertise is exceptional.",
   },
-  {
-    name: "Priya Verma",
-    role: "Product Manager, InnovateX",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-    text: "Working with Rajkaran was a pleasure. He delivered our project ahead of schedule and exceeded our expectations in every way.",
-  },
-  {
-    name: "Sandeep Singh",
-    role: "CTO, StartUpHub",
-    image: "https://randomuser.me/api/portraits/men/65.jpg",
-    text: "Rajkaran brings creativity and technical expertise to the table. Our team loved collaborating with him!",
-  },
+  // Add more testimonials here if you want
 ];
 
-// Projects (add your projects array here, as in your previous code)
+// Projects (add your projects array here)
 const projects = [
   // ... your projects array ...
 ];
@@ -126,39 +93,6 @@ export default function Portfolio() {
 
   return (
     <div className="bg-gradient-to-b from-background to-muted min-h-screen pb-20">
-      {/* Fun Facts / Personal Interests */}
-      <section className="container mx-auto px-4 md:px-8 py-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-          Fun Facts & Interests
-        </h2>
-        <div className="flex flex-wrap gap-6">
-          {funFacts.map((fact, i) => {
-            const Icon = fact.icon;
-            return (
-              <div key={i} className="flex items-center gap-3 bg-white/70 dark:bg-black/30 rounded-lg px-5 py-3 shadow glass">
-                <Icon className={`w-5 h-5 ${fact.color}`} />
-                <span className="font-medium text-lg">{fact.text}</span>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Tech Stack / Tools */}
-      <section className="container mx-auto px-4 md:px-8 py-10">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-          Tech Stack & Tools
-        </h2>
-        <div className="flex flex-wrap gap-4">
-          {techStack.map((tech) => (
-            <Badge key={tech.name} className="flex items-center gap-2 px-4 py-2 bg-white/80 dark:bg-black/30 shadow glass border border-blue-200/40 text-blue-700 dark:text-blue-200 text-base font-semibold">
-              <img src={tech.icon} alt={tech.name} className="w-5 h-5" />
-              {tech.name}
-            </Badge>
-          ))}
-        </div>
-      </section>
-
       {/* Projects */}
       <section id="projects" className="py-20 bg-gradient-to-b from-background to-muted">
         <div className="container mx-auto px-4 md:px-8">
@@ -249,12 +183,6 @@ export default function Portfolio() {
                         variant="outline"
                         className="glass border border-blue-200/40 text-blue-700 dark:text-blue-200 px-2 py-1 text-xs flex items-center gap-1"
                       >
-                        {tech === 'React' && <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="w-4 h-4" />}
-                        {tech === 'Node.js' && <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-4 h-4" />}
-                        {tech === 'MongoDB' && <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" className="w-4 h-4" />}
-                        {tech === 'TypeScript' && <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" className="w-4 h-4" />}
-                        {tech === 'Next.js' && <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" className="w-4 h-4" />}
-                        {tech === 'Vue.js' && <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" className="w-4 h-4" />}
                         {tech}
                       </Badge>
                     ))}
@@ -268,12 +196,15 @@ export default function Portfolio() {
 
       {/* Testimonials Section */}
       <section className="container mx-auto px-4 md:px-8 py-20">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-          Testimonials
+        <h2 className="text-4xl md:text-5xl font-bold mb-2 text-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          What People Say
         </h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <p className="text-xl text-muted-foreground text-center mb-10">
+          Testimonials from colleagues, clients, and collaborators who've experienced my work firsthand.
+        </p>
+        <div className="flex flex-col items-center justify-center">
           {testimonials.map((t, i) => (
-            <Card key={i} className="glass border-none shadow-xl flex flex-col items-center text-center p-8">
+            <Card key={i} className="glass border-none shadow-xl flex flex-col items-center text-center p-8 max-w-xl mx-auto">
               <img
                 src={t.image}
                 alt={t.name}
