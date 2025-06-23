@@ -57,33 +57,33 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-6 lg:px-8 bg-background text-foreground">
+    <section id="contact" className="py-24 px-6 lg:px-8 bg-background text-foreground">
       <div className="max-w-6xl mx-auto">
+        {/* Section Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">Get In Touch</h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Have a project in mind or just want to chat? I'd love to hear from you. 
-            Let's build something amazing together!
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent tracking-tight drop-shadow-lg">
+            Get In Touch
+          </h2>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            Have a project in mind or just want to chat? I'd love to hear from you.<br />
+            <span className="text-white/80">Let's build something amazing together!</span>
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-14">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-10">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Let's Connect</h3>
+              <h3 className="text-2xl font-bold text-primary mb-5">Let's Connect</h3>
               <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                I'm always open to discussing new opportunities, interesting projects, 
-                or potential collaborations. Whether you're a startup looking to build 
-                your MVP or an established company needing additional development resources, 
-                I'm here to help.
+                I’m always open to discussing new opportunities, interesting projects, or potential collaborations. Whether you’re a startup or an established company, I’m here to help you succeed.
               </p>
             </div>
 
             <div className="space-y-6">
               {contactInfo.map((info) => (
                 <div key={info.title} className="flex items-center gap-4 animate-fade-in">
-                  <div className="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center text-white shadow-lg">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white shadow-lg">
                     {info.icon}
                   </div>
                   <div>
@@ -91,36 +91,35 @@ const Contact = () => {
                     {info.link ? (
                       <a
                         href={info.link}
-                        className="text-gray-400 hover:text-primary transition-colors"
+                        className="text-gray-400 hover:text-primary transition-colors font-medium"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         {info.content}
                       </a>
                     ) : (
-                      <p className="text-gray-400">{info.content}</p>
+                      <p className="text-gray-400 font-medium">{info.content}</p>
                     )}
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="glass-card p-6 animate-fade-in">
-              <h4 className="text-lg font-semibold text-white mb-3">Quick Response</h4>
+            <div className="glass-card p-6 animate-fade-in border border-white/10 shadow-lg">
+              <h4 className="text-lg font-semibold text-accent mb-2">Quick Response</h4>
               <p className="text-gray-400 text-sm">
-                I typically respond to emails within 24 hours. For urgent inquiries, 
-                feel free to reach out via phone or LinkedIn.
+                I typically respond to emails within 24 hours. For urgent inquiries, feel free to reach out via phone or LinkedIn.
               </p>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="glass-card p-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="glass-card p-10 animate-fade-in border border-white/10 shadow-xl" style={{ animationDelay: '0.2s' }}>
+            <form onSubmit={handleSubmit} className="space-y-7">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                    Name *
+                    Name <span className="text-primary">*</span>
                   </label>
                   <input
                     type="text"
@@ -129,13 +128,13 @@ const Contact = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-white placeholder-gray-400"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-white placeholder-gray-400 transition"
                     placeholder="Your Name"
                   />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    Email *
+                    Email <span className="text-primary">*</span>
                   </label>
                   <input
                     type="email"
@@ -144,7 +143,7 @@ const Contact = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-white placeholder-gray-400"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-white placeholder-gray-400 transition"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -152,7 +151,7 @@ const Contact = () => {
 
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                  Subject *
+                  Subject <span className="text-primary">*</span>
                 </label>
                 <input
                   type="text"
@@ -161,14 +160,14 @@ const Contact = () => {
                   required
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-white placeholder-gray-400"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-white placeholder-gray-400 transition"
                   placeholder="Project Inquiry"
                 />
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                  Message *
+                  Message <span className="text-primary">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -177,7 +176,7 @@ const Contact = () => {
                   rows={6}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-white placeholder-gray-400 resize-none"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-white placeholder-gray-400 resize-none transition"
                   placeholder="Tell me about your project or just say hello!"
                 />
               </div>
@@ -185,7 +184,7 @@ const Contact = () => {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/80 hover:to-secondary/80 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover-glow"
+                className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 {isSubmitting ? (
                   <>
