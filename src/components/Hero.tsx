@@ -60,7 +60,7 @@ const Hero = () => {
         <div className="flex-1 text-center md:text-left mt-8 md:mt-0">
           <div className="mb-8">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+         Hi, I'm  <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
                 RajKaran
               </span>
             </h1>
