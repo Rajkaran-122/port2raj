@@ -95,11 +95,14 @@ const Contact = () => {
             {testimonials.map((t, idx) => (
               <div
                 key={idx}
-                className="rounded-2xl bg-white/10 border border-white/20 shadow-xl p-8 flex flex-col items-center text-center animate-fade-in transition-all hover:scale-105"
+                className="relative rounded-2xl border border-white/20 shadow-xl p-8 flex flex-col items-center text-center
+                  bg-white/10 backdrop-blur-md transition-all hover:scale-105
+                  before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-2 before:rounded-t-2xl
+                  before:bg-gradient-to-r before:from-primary before:to-accent"
                 style={{ animationDelay: `${0.1 * idx}s` }}
               >
-                <Quote className="w-8 h-8 text-accent mb-4" />
-                <p className="text-gray-200 text-lg italic mb-6">"{t.quote}"</p>
+                <Quote className="w-8 h-8 text-accent mb-4 mt-4" />
+                <p className="text-gray-200 text-lg italic mb-6 mt-2">"{t.quote}"</p>
                 <div>
                   <div className="font-semibold text-primary">{t.name}</div>
                   <div className="text-gray-400 text-sm">{t.title}</div>
