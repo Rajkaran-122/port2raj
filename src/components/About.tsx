@@ -1,8 +1,8 @@
 import {
-  Award,           // For Years Experience
-  Briefcase,       // For Projects Delivered
-  UserCheck,       // For Happy Clients
-  GitPullRequest,  // For Open Source PRs
+  Award,
+  Briefcase,
+  UserCheck,
+  GitPullRequest,
   FileText,
   Mail,
   Globe,
@@ -107,28 +107,28 @@ const About = () => (
       <div className="text-center mb-16">
         <h2
           id="about-heading"
-          className="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent tracking-tight"
+          className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent tracking-tight"
         >
           About Me
         </h2>
-        <p className="text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-medium">
+        <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-medium">
           Hi, I’m <span className="text-primary font-bold">Raj</span>, a dedicated Full Stack Developer with a passion for building impactful digital products. With over 3 years of hands-on experience, I specialize in crafting robust web and mobile applications that blend performance, accessibility, and beautiful design.
         </p>
-        <p className="text-lg text-gray-400 max-w-2xl mx-auto mt-4">
+        <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mt-4">
           I thrive on solving complex problems, collaborating with diverse teams, and continuously learning the latest in tech. Whether it’s launching a new product, optimizing an existing platform, or mentoring fellow developers, I bring energy, creativity, and a commitment to excellence to every project.
         </p>
         <div className="flex flex-wrap justify-center gap-4 mt-10">
           <a
             href="/resume.pdf"
             download
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-white font-semibold shadow-lg hover:scale-105 hover:bg-primary/90 transition-all text-lg"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-white font-semibold shadow-lg hover:scale-105 hover:bg-primary/90 transition-all text-base md:text-lg"
             aria-label="Download Resume"
           >
             <FileText className="w-5 h-5" /> Download Resume
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-white font-semibold shadow-lg hover:scale-105 hover:bg-accent/90 transition-all text-lg"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-white font-semibold shadow-lg hover:scale-105 hover:bg-accent/90 transition-all text-base md:text-lg"
             aria-label="Contact Me"
           >
             <Mail className="w-5 h-5" /> Contact Me
@@ -145,17 +145,17 @@ const About = () => (
             style={{ animationDelay: `${i * 0.1 + 0.2}s` }}
           >
             <div className="mb-3">{stat.icon}</div>
-            <span className="text-4xl font-extrabold text-white mb-1">{stat.value}</span>
-            <span className="text-gray-400 text-base font-medium text-center">{stat.label}</span>
+            <span className="text-3xl md:text-4xl font-extrabold text-white mb-1">{stat.value}</span>
+            <span className="text-gray-400 text-sm md:text-base font-medium text-center">{stat.label}</span>
           </div>
         ))}
       </div>
 
       {/* Journey & What I Do */}
       <div className="grid md:grid-cols-2 gap-12 mb-20">
-        <div className="glass-card p-10 hover-glow animate-fade-in shadow-lg">
-          <h3 className="text-2xl font-bold mb-6 text-primary">My Journey</h3>
-          <div className="space-y-4 text-gray-300 text-lg">
+        <div className="glass-card p-8 md:p-10 hover-glow animate-fade-in shadow-lg">
+          <h3 className="text-xl md:text-2xl font-bold mb-6 text-primary">My Journey</h3>
+          <div className="space-y-4 text-gray-300 text-base md:text-lg">
             <p>
               My coding journey began in 2020, driven by a fascination with how technology shapes our world. Since then, I’ve mastered the MERN stack, explored cloud and mobile development, and contributed to open source.
             </p>
@@ -167,42 +167,42 @@ const About = () => (
             </p>
           </div>
         </div>
-        <div className="glass-card p-10 hover-glow animate-fade-in shadow-lg" style={{ animationDelay: '0.2s' }}>
-          <h3 className="text-2xl font-bold mb-6 text-accent">What I Do</h3>
+        <div className="glass-card p-8 md:p-10 hover-glow animate-fade-in shadow-lg" style={{ animationDelay: '0.2s' }}>
+          <h3 className="text-xl md:text-2xl font-bold mb-6 text-accent">What I Do</h3>
           <div className="space-y-5">
             <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
               <div>
                 <h4 className="font-semibold text-white">Frontend Development</h4>
-                <p className="text-gray-400">Building responsive, accessible, and visually engaging interfaces.</p>
+                <p className="text-gray-400 text-sm md:text-base">Building responsive, accessible, and visually engaging interfaces.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-accent rounded-full mt-2"></div>
               <div>
                 <h4 className="font-semibold text-white">Backend Development</h4>
-                <p className="text-gray-400">Designing scalable APIs, databases, and server-side logic.</p>
+                <p className="text-gray-400 text-sm md:text-base">Designing scalable APIs, databases, and server-side logic.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-secondary rounded-full mt-2"></div>
               <div>
                 <h4 className="font-semibold text-white">Mobile Development</h4>
-                <p className="text-gray-400">Creating cross-platform mobile apps with smooth user experiences.</p>
+                <p className="text-gray-400 text-sm md:text-base">Creating cross-platform mobile apps with smooth user experiences.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
               <div>
                 <h4 className="font-semibold text-white">DevOps & Cloud</h4>
-                <p className="text-gray-400">Deploying, monitoring, and scaling applications in the cloud.</p>
+                <p className="text-gray-400 text-sm md:text-base">Deploying, monitoring, and scaling applications in the cloud.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-pink-500 rounded-full mt-2"></div>
               <div>
                 <h4 className="font-semibold text-white">Testing & Quality</h4>
-                <p className="text-gray-400">Ensuring code quality and reliability with modern testing tools.</p>
+                <p className="text-gray-400 text-sm md:text-base">Ensuring code quality and reliability with modern testing tools.</p>
               </div>
             </div>
           </div>
@@ -220,12 +220,12 @@ const About = () => (
             <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${skill.color} p-3 mb-4 mx-auto shadow-lg flex items-center justify-center`}>
               <span className="text-white">{skill.icon}</span>
             </div>
-            <h3 className="text-lg font-bold text-center mb-4 text-white">{skill.category}</h3>
+            <h3 className="text-base md:text-lg font-bold text-center mb-4 text-white">{skill.category}</h3>
             <div className="flex flex-wrap gap-2 justify-center">
               {skill.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 py-1 bg-white/10 rounded-full text-sm text-gray-300 hover:bg-white/20 transition-colors"
+                  className="px-3 py-1 bg-white/10 rounded-full text-xs md:text-sm text-gray-300 hover:bg-white/20 transition-colors"
                 >
                   {tech}
                 </span>
