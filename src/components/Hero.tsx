@@ -61,7 +61,7 @@ const Hero = () => {
           <div className="mb-8">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-                RajKaran Yadav
+                RajKaran
               </span>
             </h1>
             <div className="text-2xl md:text-3xl text-muted-foreground font-mono h-12 flex items-center justify-center md:justify-start">
