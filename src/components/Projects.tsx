@@ -86,11 +86,11 @@ const otherProjects = [
 const Projects = () => (
   <section
     id="projects"
-    className="py-20 px-6 lg:px-8 bg-gradient-to-br from-[#18181b] via-[#23272f] to-[#101014] text-white min-h-screen"
+    className="py-20 px-6 lg:px-8 bg-background text-foreground min-h-screen"
   >
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-400 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent drop-shadow-lg">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent drop-shadow-lg">
           Projects
         </h2>
         <p className="text-lg text-gray-300 max-w-2xl mx-auto font-light">
@@ -100,27 +100,26 @@ const Projects = () => (
 
       {/* Custom Projects */}
       <div className="mb-16">
-        <h3 className="text-2xl font-semibold mb-6 text-fuchsia-400">Featured Projects</h3>
+        <h3 className="text-2xl font-semibold mb-6 text-accent">Featured Projects</h3>
         <div className="grid gap-8 md:grid-cols-2">
           {customProjects.map((project) => (
             <div
               key={project.title}
-              className="rounded-xl border border-gray-800 bg-white/5 backdrop-blur-md shadow-xl hover:shadow-2xl transition group flex flex-col justify-between overflow-hidden relative"
+              className="pro-card flex flex-col justify-between"
             >
-              <div className="absolute inset-0 pointer-events-none group-hover:bg-gradient-to-br group-hover:from-fuchsia-700/10 group-hover:to-cyan-400/10 transition" />
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-cover rounded-t-xl"
+                className="w-full h-48 object-cover rounded-t-2xl"
               />
               <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-2xl font-semibold mb-2 text-white group-hover:text-fuchsia-400 transition">
+                <h3 className="text-2xl font-semibold mb-2 text-white group-hover:text-accent transition">
                   {project.title}
                 </h3>
                 <p className="text-gray-300 mb-4">{project.description}</p>
                 <div className="mt-auto flex gap-2">
                   {project.github && (
-                    <Button asChild size="sm" variant="outline" className="border-gray-700 text-gray-300 hover:text-fuchsia-400">
+                    <Button asChild size="sm" variant="outline" className="border-gray-700 text-gray-300 hover:text-accent">
                       <a
                         href={project.github}
                         target="_blank"
@@ -132,7 +131,7 @@ const Projects = () => (
                       </a>
                     </Button>
                   )}
-                  <Button asChild size="sm" className="bg-gradient-to-r from-fuchsia-500 to-cyan-400 text-white hover:from-fuchsia-600 hover:to-cyan-500">
+                  <Button asChild size="sm" className="bg-gradient-to-r from-primary to-accent text-white hover:from-primary/80 hover:to-accent/80">
                     <a
                       href={project.url}
                       target="_blank"
@@ -151,21 +150,20 @@ const Projects = () => (
 
       {/* Other Projects */}
       <div className="mb-12">
-        <h3 className="text-2xl font-semibold mb-6 text-cyan-400">Other Projects</h3>
+        <h3 className="text-2xl font-semibold mb-6 text-primary">Other Projects</h3>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {otherProjects.map((project) => (
             <div
               key={project.title}
-              className="rounded-xl border border-gray-800 bg-white/5 backdrop-blur-md shadow-xl hover:shadow-2xl transition group flex flex-col justify-between overflow-hidden relative"
+              className="pro-card flex flex-col justify-between"
             >
-              <div className="absolute inset-0 pointer-events-none group-hover:bg-gradient-to-br group-hover:from-cyan-700/10 group-hover:to-fuchsia-400/10 transition" />
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-40 object-cover rounded-t-xl"
+                className="w-full h-40 object-cover rounded-t-2xl"
               />
               <div className="p-6 flex-1 flex flex-col">
-                <h4 className="text-xl font-semibold mb-2 text-white group-hover:text-cyan-400 transition">
+                <h4 className="text-xl font-semibold mb-2 text-white group-hover:text-primary transition">
                   {project.title}
                 </h4>
                 <p className="text-gray-300 mb-4 text-sm">{project.description}</p>
@@ -174,7 +172,7 @@ const Projects = () => (
                     project.technologies.slice(0, 3).map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 bg-cyan-400/10 text-cyan-300 rounded text-xs font-mono"
+                        className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-mono"
                       >
                         {tech}
                       </span>
@@ -187,7 +185,7 @@ const Projects = () => (
                 </div>
                 <div className="mt-auto flex gap-2">
                   {project.github && (
-                    <Button asChild size="sm" variant="outline" className="border-gray-700 text-gray-300 hover:text-cyan-400">
+                    <Button asChild size="sm" variant="outline" className="border-gray-700 text-gray-300 hover:text-primary">
                       <a
                         href={project.github}
                         target="_blank"
@@ -200,7 +198,7 @@ const Projects = () => (
                     </Button>
                   )}
                   {project.live && (
-                    <Button asChild size="sm" className="bg-gradient-to-r from-cyan-400 to-fuchsia-500 text-white hover:from-cyan-500 hover:to-fuchsia-600">
+                    <Button asChild size="sm" className="bg-gradient-to-r from-primary to-accent text-white hover:from-primary/80 hover:to-accent/80">
                       <a
                         href={project.live}
                         target="_blank"
@@ -219,7 +217,7 @@ const Projects = () => (
       </div>
 
       <div className="text-center">
-        <Button variant="outline" size="lg" asChild className="border-gray-700 text-gray-300 hover:text-fuchsia-400">
+        <Button variant="outline" size="lg" asChild className="border-gray-700 text-gray-300 hover:text-accent">
           <a
             href="https://github.com/rajkaranyadav"
             target="_blank"
