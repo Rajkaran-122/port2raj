@@ -141,7 +141,7 @@ const About = () => (
         {stats.map((stat, i) => (
           <div
             key={stat.label}
-            className="glass-card p-8 flex flex-col items-center justify-center animate-fade-in shadow-xl"
+            className="pro-card p-8 flex flex-col items-center justify-center animate-fade-in"
             style={{ animationDelay: `${i * 0.1 + 0.2}s` }}
           >
             <div className="mb-3">{stat.icon}</div>
@@ -153,7 +153,7 @@ const About = () => (
 
       {/* Journey & What I Do */}
       <div className="grid md:grid-cols-2 gap-12 mb-20">
-        <div className="glass-card p-8 md:p-10 hover-glow animate-fade-in shadow-lg">
+        <div className="pro-card p-8 md:p-10 animate-fade-in">
           <h3 className="text-xl md:text-2xl font-bold mb-6 text-primary">My Journey</h3>
           <div className="space-y-4 text-gray-300 text-base md:text-lg">
             <p>
@@ -167,7 +167,7 @@ const About = () => (
             </p>
           </div>
         </div>
-        <div className="glass-card p-8 md:p-10 hover-glow animate-fade-in shadow-lg" style={{ animationDelay: '0.2s' }}>
+        <div className="pro-card p-8 md:p-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
           <h3 className="text-xl md:text-2xl font-bold mb-6 text-accent">What I Do</h3>
           <div className="space-y-5">
             <div className="flex items-start gap-3">
@@ -214,7 +214,7 @@ const About = () => (
         {skills.map((skill, index) => (
           <div
             key={skill.category}
-            className="glass-card p-6 hover-glow animate-fade-in shadow-lg"
+            className="pro-card p-6 animate-fade-in"
             style={{ animationDelay: `${index * 0.1 + 0.4}s` }}
           >
             <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${skill.color} p-3 mb-4 mx-auto shadow-lg flex items-center justify-center`}>
