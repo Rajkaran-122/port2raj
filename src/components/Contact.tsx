@@ -61,7 +61,7 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent tracking-tight drop-shadow-lg">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent drop-shadow-lg">
             Get In Touch
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
