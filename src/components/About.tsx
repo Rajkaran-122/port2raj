@@ -105,10 +105,7 @@ const About = () => (
     <div className="max-w-6xl mx-auto">
       {/* Header */}
       <div className="text-center mb-16">
-        <h2
-          id="about-heading"
-          className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent tracking-tight"
-        >
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent drop-shadow-lg">
           About Me
         </h2>
         <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-medium">
