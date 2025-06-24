@@ -64,4 +64,79 @@
     --input: 220 6% 80%;
     --ring: 221 83% 56%;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+@layer components {
+  .pro-card {
+    @apply bg-card/80 border border-white/10 rounded-2xl transition-all duration-300;
+    box-shadow:
+      0 2px 8px 0 rgba(30, 41, 59, 0.10),
+      0 8px 32px 0 rgba(30, 41, 59, 0.18);
+    backdrop-filter: blur(8px);
+  }
+  .pro-card:hover {
+    @apply shadow-2xl scale-[1.03] border-primary/30;
+    box-shadow:
+      0 4px 16px 0 rgba(99, 102, 241, 0.15),
+      0 16px 48px 0 rgba(99, 102, 241, 0.22);
+    border-color: hsl(var(--primary));
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+  }
+
+  .hover-glow {
+    transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  }
+  .hover-glow:hover {
+    @apply shadow-2xl shadow-primary/25 -translate-y-1 scale-[1.02];
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 8px rgba(30,41,59,0.18);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, rgb(37 99 235), rgb(162 28 175));
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, rgb(37 99 235), rgb(168 85 247));
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(37, 99, 235, 0.3);
+  color: inherit;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid rgb(37 99 235);
+  outline-offset: 2px;
 }
