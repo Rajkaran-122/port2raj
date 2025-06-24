@@ -35,7 +35,7 @@ const Navigation = () => {
             className="text-2xl font-bold gradient-text select-none focus:outline-none focus:ring-2 focus:ring-primary rounded"
             aria-label="Go to home"
           >
-            Rajkaran yadav
+            Rajkaran
           </a>
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
