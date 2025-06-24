@@ -1,7 +1,28 @@
 import { useState } from 'react';
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
+
+const testimonials = [
+  {
+    quote:
+      "Rajkaran brings creativity and technical excellence together. His UI/UX designs are both beautiful and functional.",
+    name: "Amit Verma",
+    title: "Lead Frontend Engineer at PixelWave",
+  },
+  {
+    quote:
+      "Rajkaran's attention to detail and innovative solutions transformed our user experience. His full-stack expertise is exceptional.",
+    name: "Sarah Gupta",
+    title: "Product Designer at TechCorp",
+  },
+  {
+    quote:
+      "Working with Rajkaran was a pleasure. He communicates clearly, delivers on time, and always exceeds expectations.",
+    name: "Priya Sharma",
+    title: "Project Manager at InnovateX",
+  },
+];
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -61,7 +82,7 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section Heading */}
         <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent drop-shadow-lg">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent drop-shadow-lg">
             Get In Touch
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -197,10 +218,39 @@ const Contact = () => {
                     Send Message
                   </>
                 )}
-              </Button> 
+              </Button>
             </form>
           </div>
         </div>
+
+        {/* Testimonials Section */}
+        <div className="mt-24">
+          <div className="text-center mb-10">
+            <h3 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent drop-shadow-lg">
+              What People Say
+            </h3>
+            <p className="text-lg text-gray-400">
+              Testimonials from colleagues, clients, and collaborators who've experienced my work firsthand.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((t, idx) => (
+              <div
+                key={idx}
+                className="glass-card p-8 border border-white/10 shadow-lg flex flex-col items-center text-center animate-fade-in"
+                style={{ animationDelay: `${0.1 * idx}s` }}
+              >
+                <Quote className="w-8 h-8 text-accent mb-4" />
+                <p className="text-gray-200 text-lg italic mb-6">"{t.quote}"</p>
+                <div>
+                  <div className="font-semibold text-primary">{t.name}</div>
+                  <div className="text-gray-400 text-sm">{t.title}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* End Testimonials */}
       </div>
     </section>
   );
