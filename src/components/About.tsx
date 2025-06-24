@@ -205,7 +205,9 @@ const About = () => (
           </div>
         </div>
       </div>
-
+             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent drop-shadow-lg">
+          Skills & Technologies
+        </h2>
       {/* Skills */}
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {skills.map((skill, index) => (
